@@ -1,0 +1,252 @@
+/* apple_style.css */
+
+:root {
+    /* Cores Apple-like */
+    --apple-blue: #007aff;
+    --apple-green: #34c759;
+    --apple-red: #ff3b30;
+    --apple-yellow: #ffcc00;
+    --apple-gray-light: #f5f5f7;
+    --apple-gray-medium: #e0e0e0;
+    --apple-gray-dark: #8e8e93;
+    --text-dark: #1c1c1e;
+    --text-medium: #4a4a4a;
+    --text-light: #6a6a6a;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #e6e9ee); /* Gradiente suave para o fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--text-dark);
+}
+
+.container {
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.text-center {
+    background-color: #ffffff;
+    border-radius: 20px; /* Mais arredondado */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra mais profunda */
+    padding: 40px;
+    max-width: 550px; /* Levemente maior */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px); /* Ajuste */
+    box-sizing: border-box;
+    position: relative; /* Para emojis */
+    overflow: hidden; /* Para garantir que sombras e emojis não estourem */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Mais arredondado */
+    margin-bottom: 30px; /* Mais espaçamento */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil para imagens */
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--text-dark);
+    font-weight: 700; /* Mais peso */
+    margin-bottom: 20px; /* Mais espaçamento */
+    line-height: 1.3;
+    text-align: center;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.1em; }
+
+
+/* Alert styles com mais vida */
+.alert {
+    border-radius: 12px;
+    padding: 18px 25px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border: none; /* Remove default border */
+}
+
+.alert-warning {
+    background: linear-gradient(45deg, #ffe066, var(--apple-yellow)); /* Gradiente */
+    color: #a37100;
+}
+
+.alert-success {
+    background: linear-gradient(45deg, #a8e6cf, var(--apple-green)); /* Gradiente */
+    color: #0b4a1f;
+}
+
+.alert-primary {
+    background: linear-gradient(45deg, #a7d9f7, var(--apple-blue)); /* Gradiente */
+    color: #003a70;
+}
+
+.alert-dark {
+    background: linear-gradient(45deg, #e0e0e0, #c0c0c0); /* Gradiente */
+    color: #333;
+}
+
+/* Liquid Glass Buttons */
+.btn {
+    border: none;
+    padding: 16px 35px; /* Maior */
+    border-radius: 35px; /* Mais arredondado */
+    font-size: 1.2em; /* Maior */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    margin: 12px; /* Mais espaçamento */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sutil sombra no texto */
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    opacity: 0;
+    transform: translateX(-100%) skewX(-30deg);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    transform: translateX(0%) skewX(-30deg);
+}
+
+.btn:hover {
+    transform: translateY(-5px); /* Lift mais notável */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+/* Cores específicas dos botões com gradientes */
+.btn-success {
+    background: linear-gradient(45deg, #4CAF50, var(--apple-green));
+    color: white;
+}
+.btn-success:hover {
+    background: linear-gradient(45deg, #388E3C, #2e9f4c);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #F44336, var(--apple-red));
+    color: white;
+}
+.btn-danger:hover {
+    background: linear-gradient(45deg, #D32F2F, #d62c26);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #2196F3, var(--apple-blue));
+    color: white;
+}
+.btn-primary:hover {
+    background: linear-gradient(45deg, #1976D2, #005bb5);
+}
+
+/* Footer styling - Mantido sem o GitHub */
+footer {
+    margin-top: 50px;
+    width: 100%;
+}
+
+footer .btn.text-white {
+    display: none;
+}
+
+/* Efeito de Emojis de Coração */
+.heart-emoji {
+    position: absolute;
+    font-size: 2em;
+    animation: floatUp 4s ease-out forwards;
+    opacity: 0;
+    pointer-events: none; /* Make sure it doesn't block clicks */
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+        filter: hue-rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
+
+
+/* Specific adjustments for gotyou.html's moving button */
+#no-button {
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-center {
+        padding: 25px;
+        min-height: auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .img-fluid {
+        margin-bottom: 20px;
+    }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    .btn {
+        padding: 14px 25px;
+        font-size: 1.05em;
+        margin: 10px;
+    }
+    .alert {
+        padding: 15px 20px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-center {
+        padding: 20px;
+    }
+    .btn {
+        font-size: 0.95em;
+        padding: 12px 20px;
+    }
+}

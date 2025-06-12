@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que ocupa a altura total da viewport */
+    background-color: #f0f2f5; /* Um cinza claro suave para o fundo */
+    font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Fonte estilo Apple */
+    color: #333; /* Cor do texto padrão */
+    text-align: center; /* Centraliza o texto */
+    margin: 0;
+    overflow: hidden; /* Evita barras de rolagem desnecessárias */
+}
+
+.loading-container {
+    padding: 30px;
+    border-radius: 15px; /* Cantos mais arredondados */
+    background-color: #fff; /* Fundo branco para o container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza itens dentro do container */
+    max-width: 90%; /* Limita a largura em telas menores */
+}
+
+.spinner-border {
+    width: 3rem; /* Tamanho do spinner */
+    height: 3rem;
+    margin-bottom: 20px; /* Espaço abaixo do spinner */
+    color: #007bff !important; /* Usa a cor azul primária do Bootstrap */
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #343a40; /* Cor escura para o título */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #6c757d; /* Cor cinza para o parágrafo */
+    margin-bottom: 5px;
+}
+
+.small-text {
+    font-size: 0.85em;
+    color: #999; /* Cor mais clara para o texto pequeno */
+    margin-top: 15px;
+}
